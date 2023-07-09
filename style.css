@@ -6,9 +6,28 @@
     box-sizing: border-box;
 }
 
-body {
-    background-color: rgb(24, 24, 24);
-    color: white;
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.darkModeBtn {
+    margin: 4px 4px 0px 0px;
+    border: none;
+    outline: none;
+    background-color: rgb(108, 107, 107);
+    border-radius: 5px;
+    padding: 4px;
+}
+.darkModeBtn:active {
+    outline: 2px solid black;
+    background-color: rgb(50, 49, 49);
+}
+
+main {
+   
+   
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,23 +36,23 @@ body {
     padding: 0px 6px;
 }
 
-main {
+.appContainer {
     box-shadow: 0px 0px 2px rgb(152, 151, 151);
     border: none;
     outline: none;
     border-radius: 6px;
     height: 400px;
     width: 370px;
-    background-color: #2B2730;
+    background-color: #6d5696;
 }
 
 
 h2 {
     text-align: center;
     font-family: 'Libre Baskerville', serif;
-    color: #5e5e63;
+    /* color: #5e5e63; */
+    color: #000000;
     user-select: none;
-    border-bottom: 1px solid rgb(61, 59, 59);
     padding-block: 4px;
 }
 
@@ -64,13 +83,14 @@ input {
 }
 
 input:focus {
-    box-shadow: 0px 0px 6px rgb(63, 72, 82);
+    box-shadow: 0px 0px 6px rgb(225, 43, 228);
     transition: .2s;
 
 }
 
 input::placeholder {
     color: rgba(244, 46, 46, 0.774);
+    
 }
 
 input:focus::placeholder {
@@ -84,20 +104,23 @@ input:focus::placeholder {
     outline: none;
     margin-left: -40px;
     border-radius: 0px 4px 4px 0px;
-    background-color: rgb(55, 55, 95);
+    /* background-color: rgb(55, 55, 95); */
+    background-color: rgb(1, 69, 97);
     font-size: 1rem;
-    padding: .6rem 6px;
+    padding: .5rem 6px;
     font-family: 'Ysabeau Office', sans-serif;
 
 }
 
 #addBtn:hover {
-    background-color: rgb(38, 38, 77);
+    /* background-color: rgb(38, 38, 77); */
+    background-color: rgb(4, 58, 82);
     transition: 0.2s;
 }
 
 #addBtn:active {
     background-color: rgb(6, 6, 24);
+    background-color: rgb(2, 33, 47);
     color: whitesmoke;
 }
 
@@ -106,6 +129,7 @@ input:focus::placeholder {
     width: 100%;
     height: 250px;
     overflow-y: auto;
+   
 
 }
 
@@ -119,16 +143,20 @@ input:focus::placeholder {
     margin-inline: auto;
     border-radius: 3px;
     user-select: none;
-    color: white;
     font-family: 'Ysabeau Office', sans-serif;
 }
 
-.todoItem>.todoDataClass {
-    color: green;
-}
+
 
 .todoItem.shadowblowing {
     box-shadow: 0px 0px 3px green;
+    color: green;
+}
+
+.todoItem.todoItemWhiteModeEffect {
+    background-color: #3CCF4E;
+    color: black;
+    box-shadow: 0px 0px 2px black;
 }
 
 
@@ -141,7 +169,7 @@ input:focus::placeholder {
 }
 
 .fa-square-check {
-    color: green;
+    color: rgb(0, 0, 0);
     cursor: pointer;
     font-size: 1.2rem;
     margin-inline: 4px;
@@ -191,11 +219,11 @@ input:focus::placeholder {
 
 
 @media screen and (max-width:500px) {
-    body {
+    main {
         padding: 0px 10px;
     }
 
-    main {
+    .appContainer {
         height: 80vh;
         padding-bottom: 12px;
     }

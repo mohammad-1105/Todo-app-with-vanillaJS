@@ -3,6 +3,10 @@ const input = document.getElementById("inputBox");
 const addBtn = document.getElementById("addBtn");
 const clear = document.getElementById("clearAllBtn");
 const todosListBox = document.querySelector(".todosListBox");
+const darkMode = document.querySelector(".darkModeBtn");
+const html = document.querySelector("html");
+const appContainer = document.querySelector(".appContainer");
+const h2 = document.querySelector("h2");
 
 // adding events
 addBtn.addEventListener("click", (e) => {
@@ -36,10 +40,18 @@ const todo = (todoData) => {
   const check = todoItem.querySelector(".fa-square-check");
   check.addEventListener("click", (e) => {
     e.stopPropagation();
-    todoItem
-      .querySelector("#todoDataElement")
-      .classList.toggle("todoDataClass");
-    todoItem.classList.toggle("shadowblowing");
+    if (
+      html.style.backgroundColor === "white" &&
+      html.style.color === "black"
+    ) {
+      todoItem.querySelector("#todoDataElement");
+      todoItem.classList.toggle("todoItemWhiteModeEffect");
+    } else {
+      todoItem
+        .querySelector("#todoDataElement")
+        .classList.toggle("todoDataClass");
+      todoItem.classList.toggle("shadowblowing");
+    }
   });
 
   // delete
@@ -54,3 +66,22 @@ const todo = (todoData) => {
     todoItem.remove();
   });
 };
+
+//  dark mode logic
+
+darkMode.addEventListener("click", (e) => {
+  e.stopPropagation();
+  if (html.style.backgroundColor === "white") {
+    darkMode.textContent = "☀️";
+    html.style.backgroundColor = "black";
+    html.style.color = "white";
+    appContainer.style.backgroundColor = "#2C272E";
+    h2.style.color = "#63686E";
+  } else {
+    html.style.backgroundColor = "white";
+    html.style.color = "black";
+    darkMode.textContent = "🌙";
+    appContainer.style.backgroundColor = "#6d5696";
+    h2.style.color = "black";
+  }
+});
