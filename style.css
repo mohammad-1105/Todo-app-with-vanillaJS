@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Ysabeau+Office&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(24, 24, 24);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0px 6px;
+}
+
+main {
+    box-shadow: 0px 0px 2px rgb(152, 151, 151);
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    height: 400px;
+    width: 370px;
+    background-color:#2B2730;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Libre Baskerville', serif;
+    color: #5e5e63;
+    user-select: none;
+    border-bottom: 1px solid rgb(61, 59, 59);
+    padding-block: 4px;
+}
+
+.todosBoxContainer {
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 360px;
+}
+
+.inputContainer {
+    display: flex;
+    align-items: center;
+}
+
+input {
+    border: none;
+    outline: none;
+    box-shadow: 0px 0px 2px rgb(78, 76, 76);
+    border-radius: 4px;
+    padding: .7rem .7rem;
+    display: block;
+    background-color: transparent;
+    width: 100%;
+    color: whitesmoke;
+}
+
+input:focus {
+    box-shadow: 0px 0px 6px rgb(63, 72, 82);
+    transition: .2s;
+
+}
+
+input::placeholder {
+    color: rgba(244, 46, 46, 0.774);
+}
+
+input:focus::placeholder {
+    color: rgb(63, 72, 82);
+
+
+}
+
+#addBtn {
+    border: none;
+    outline: none;
+    margin-left: -40px;
+    border-radius: 0px 4px 4px 0px;
+    background-color: rgb(55, 55, 95);
+    font-size: 1rem;
+    padding: .6rem 6px;
+    font-family: 'Ysabeau Office', sans-serif;
+
+}
+
+#addBtn:hover {
+    background-color: rgb(38, 38, 77);
+    transition: 0.2s;
+}
+
+#addBtn:active {
+    background-color: rgb(6, 6, 24);
+    color: whitesmoke;
+}
+
+.todosListBox {
+
+    width: 100%;
+    height: 250px;
+    overflow-y: auto;
+  
+}
+
+.todoItem {
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 0px 2px rgb(66, 63, 63);
+    padding: 4px 6px;
+    margin-block: 5px;
+    width: 95%;
+    margin-inline: auto;
+    border-radius: 3px;
+    user-select: none;
+    color:white;
+    font-family: 'Ysabeau Office', sans-serif;
+}
+
+.todoItem >.todoDataClass{
+    color: green;
+}
+.todoItem.shadowblowing{
+    box-shadow: 0px 0px 3px green;
+}
+
+
+.todoItem>div {
+    border: none;
+    outline: none;
+    list-style-type: none;
+    width: 100%;
+
+}
+
+.fa-square-check {
+    color: green;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-inline: 4px;
+}
+
+.fa-square-minus {
+    color: red;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-inline: 4px;
+}
+
+.fa-square-check:active {
+    color: rgb(3, 85, 3);
+}
+
+.fa-square-minus:active {
+    color: rgb(159, 2, 2)
+}
+
+
+#clearAllBtn {
+    background-color: red;
+    width: 85%;
+    margin: 0px auto;
+    display: block;
+    text-transform: uppercase;
+    padding: 4px 2px;
+    font: bold;
+    font-family: 'Ysabeau Office', sans-serif;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+}
+
+#clearAllBtn:hover {
+    background-color: rgb(186, 6, 6);
+    transition: .2s ease-out;
+}
+
+#clearAllBtn:active {
+    box-shadow: 0px 0px 6px rgb(63, 72, 82);
+
+}
