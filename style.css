@@ -196,17 +196,17 @@ input:focus::placeholder {
     }
 
     main {
-        height: 92vh;
+        height: 80vh;
         padding-bottom: 12px;
     }
 
     .todosBoxContainer {
-        height: 93%;
+        height: 92%;
     }
 
     .todosListBox {
-        height: 77%;
-
+        height: 75%;
+       
 
     }
 
