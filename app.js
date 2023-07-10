@@ -40,18 +40,8 @@ const todo = (todoData) => {
   const check = todoItem.querySelector(".fa-square-check");
   check.addEventListener("click", (e) => {
     e.stopPropagation();
-    if (
-      html.style.backgroundColor === "white" &&
-      html.style.color === "black"
-    ) {
-      todoItem.querySelector("#todoDataElement");
-      todoItem.classList.toggle("todoItemWhiteModeEffect");
-    } else {
-      todoItem
-        .querySelector("#todoDataElement")
-        .classList.toggle("todoDataClass");
-      todoItem.classList.toggle("shadowblowing");
-    }
+    todoItem.querySelector("#todoDataElement");
+    todoItem.classList.toggle("todoItemWhiteModeEffect");
   });
 
   // delete
@@ -77,11 +67,14 @@ darkMode.addEventListener("click", (e) => {
     html.style.color = "white";
     appContainer.style.backgroundColor = "#2C272E";
     h2.style.color = "#63686E";
+    input.style.color = 'white';
   } else {
     html.style.backgroundColor = "white";
     html.style.color = "black";
     darkMode.textContent = "🌙";
-    appContainer.style.backgroundColor = "#6d5696";
+    appContainer.style.backgroundColor = "#f0eee1";
     h2.style.color = "black";
+    input.style.color = "#f0eee1";
+
   }
 });
